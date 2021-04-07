@@ -3,24 +3,32 @@ import { NavigationContainer } from '@react-navigation/native';
 import AuthStack from './authStack';
 import MainStack from './mainStack';
 import firebase from 'firebase';
+import { View } from 'react-native';
 
 
 const Route: FC = () => {
     const [user, setUser] = useState<any>(null);
 
-    const getUser = async () => {
-        firebase.auth().onAuthStateChanged(data => {
-            setUser(data)
-        })
-    }
     useEffect(() => {
         getUser();
     }, [])
 
-    console.log('user=>', user)
+    const getUser = async () => {
+        firebase.auth().onAuthStateChanged((data: any | null) => {
+            if (data) {
+                setUser(data);
+            } else {
+                setUser(false);
+            }
+        })
+    }
+
+    if (user == null) {
+        return (<View />)
+    }
     return (
         <NavigationContainer>
-            {user !== null ? <MainStack /> : <AuthStack />}
+            {user ? <MainStack /> : <AuthStack />}
         </NavigationContainer>
     )
 }

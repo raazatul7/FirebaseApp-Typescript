@@ -4,6 +4,7 @@ import Route from './src/navigation/route';
 
 
 const App: FC = () => {
+
   return (
     <Route />
   )

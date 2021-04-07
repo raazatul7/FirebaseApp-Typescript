@@ -114,7 +114,6 @@
 				4B34AEB8143B50C543D18C15 /* Pods-FirebaseApp-FirebaseAppTests.debug.xcconfig */,
 				943FECACB92857A391DCCA19 /* Pods-FirebaseApp-FirebaseAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
