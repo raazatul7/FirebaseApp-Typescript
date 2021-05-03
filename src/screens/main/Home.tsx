@@ -23,6 +23,7 @@ const Home: FC<Props> = (props) => {
         const uid = firebase.auth().currentUser?.uid;
         const user = await firebase.firestore().collection('users').doc(uid).get();
         setUser({ id: user.id, ...user.data() })
+        console.warn('user=>', JSON.stringify(user, null, 2))
     }
 
     const handleSignOut = async () => {
@@ -33,6 +34,7 @@ const Home: FC<Props> = (props) => {
         firebase.firestore().collection('posts').where('approved', '==', true).onSnapshot(querySnapShot => {
             const documents = querySnapShot.docs;
             setPosts(documents);
+            console.warn('documents=>', JSON.stringify(documents, null, 2))
         })
 
     }

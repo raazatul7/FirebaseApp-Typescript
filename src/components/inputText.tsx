@@ -21,11 +21,11 @@ const InputText: FC<Props> = (props) => {
                 onChangeText={props.onTextChange}
                 secureTextEntry={props.secureTextEntry}
             />
-            <TouchableOpacity style={styles.cameraBtn}
+            {props.onCameraPress && <TouchableOpacity style={styles.cameraBtn}
                 onPress={props.onCameraPress}
             >
                 <Image source={IMAGES.camera} style={styles.cameraIcon} />
-            </TouchableOpacity>
+            </TouchableOpacity>}
         </View >
     )
 }

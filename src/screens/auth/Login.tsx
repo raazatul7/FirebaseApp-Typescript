@@ -14,6 +14,7 @@ const Login: FC<Props> = (props) => {
     const handleLogin = async () => {
         if (email && password) {
             await firebase.auth().signInWithEmailAndPassword(email, password).then((res: any) => {
+                console.log('res=>', res)
             }).catch(err => Alert.alert(err.message))
 
         } else {
