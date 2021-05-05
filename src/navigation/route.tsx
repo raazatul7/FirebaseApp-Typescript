@@ -7,7 +7,7 @@ import firebase from 'firebase';
 
 
 const Route: FC = () => {
-    const [user, setUser] = useState<any>(false);
+    const [user, setUser] = useState<any>(null);
 
     useEffect(() => {
         getUser();
@@ -15,15 +15,17 @@ const Route: FC = () => {
 
     const getUser = async () => {
         firebase.auth().onAuthStateChanged(_user => {
+            console.log('_user=>', _user)
             if (_user) {
                 setUser(_user)
             }
         })
     }
+    console.log('user=>', user)
 
-    if (user == null) {
-        return (<View />)
-    }
+    // if (user == null) {  
+    //     return (<View />)
+    // }
     return (
         <NavigationContainer>
             {user ? <MainStack /> : <AuthStack />}

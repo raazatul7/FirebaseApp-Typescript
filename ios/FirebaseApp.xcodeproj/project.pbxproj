@@ -14,6 +14,7 @@
 		79462E967B64492880516A12 /* libPods-FirebaseApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51911A391E4D0CB68E0EFA0B /* libPods-FirebaseApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		95A56C466FF715D722277A29 /* libPods-FirebaseApp-FirebaseAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DC7B1E3D3079C2A7A1191E /* libPods-FirebaseApp-FirebaseAppTests.a */; };
+		EEA6C1B42642908D00F0B9AC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA6C1B32642908D00F0B9AC /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		943FECACB92857A391DCCA19 /* Pods-FirebaseApp-FirebaseAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp-FirebaseAppTests.release.xcconfig"; path = "Target Support Files/Pods-FirebaseApp-FirebaseAppTests/Pods-FirebaseApp-FirebaseAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		ECDB421BAC6A650214E562D3 /* Pods-FirebaseApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EEA6C1B22642908D00F0B9AC /* FirebaseApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FirebaseApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		EEA6C1B32642908D00F0B9AC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F23052FD3FB6871D3BBED155 /* Pods-FirebaseApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseApp.release.xcconfig"; path = "Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +95,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				EEA6C1B32642908D00F0B9AC /* File.swift */,
+				EEA6C1B22642908D00F0B9AC /* FirebaseApp-Bridging-Header.h */,
 			);
 			name = FirebaseApp;
 			sourceTree = "<group>";
@@ -159,7 +164,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				4A1F675B99BBA0482E0B9728 /* [CP] Embed Pods Frameworks */,
 				23E713914FCEE1B774525AFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -182,7 +186,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				C35EFDE5DCBB68F4F986024A /* [CP] Embed Pods Frameworks */,
 				C96A238D36A4E9974E68006C /* [CP] Copy Pods Resources */,
 				F36F93C4319C49A338E29495 /* [CP-User] [RNFB] Core Configuration */,
 			);
@@ -208,7 +211,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -304,40 +307,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp-FirebaseAppTests/Pods-FirebaseApp-FirebaseAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4A1F675B99BBA0482E0B9728 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp-FirebaseAppTests/Pods-FirebaseApp-FirebaseAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp-FirebaseAppTests/Pods-FirebaseApp-FirebaseAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp-FirebaseAppTests/Pods-FirebaseApp-FirebaseAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C35EFDE5DCBB68F4F986024A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FirebaseApp/Pods-FirebaseApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		C96A238D36A4E9974E68006C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				EEA6C1B42642908D00F0B9AC /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +411,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B34AEB8143B50C543D18C15 /* Pods-FirebaseApp-FirebaseAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				DEVELOPMENT_TEAM = VCWMH4QG48;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -468,8 +441,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 943FECACB92857A391DCCA19 /* Pods-FirebaseApp-FirebaseAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = VCWMH4QG48;
 				INFOPLIST_FILE = FirebaseAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +471,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VCWMH4QG48;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = FirebaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,8 +483,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.typescript.FirebaseApp;
 				PRODUCT_NAME = FirebaseApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirebaseApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -521,6 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VCWMH4QG48;
 				INFOPLIST_FILE = FirebaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,8 +510,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.typescript.FirebaseApp;
 				PRODUCT_NAME = FirebaseApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "FirebaseApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

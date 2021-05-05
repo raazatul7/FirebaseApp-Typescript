@@ -2,7 +2,7 @@ import React, { FC, useState, useEffect } from 'react';
 import { Alert, StyleSheet, Text, View, SafeAreaView, FlatList } from 'react-native';
 import { Button, InputText, Posts } from '../../components';
 import firebase from 'firebase';
-import ImagePicker, { Image } from 'react-native-image-crop-picker'
+import ImagePicker from 'react-native-image-crop-picker'
 
 interface Props {
     navigation: any;
@@ -22,8 +22,9 @@ const Home: FC<Props> = (props) => {
     const fetchCurrentUser = async () => {
         const uid = firebase.auth().currentUser?.uid;
         const user = await firebase.firestore().collection('users').doc(uid).get();
+        console.warn('user=>', JSON.stringify(await firebase.firestore(), null, 2))
+
         setUser({ id: user.id, ...user.data() })
-        console.warn('user=>', JSON.stringify(user, null, 2))
     }
 
     const handleSignOut = async () => {
